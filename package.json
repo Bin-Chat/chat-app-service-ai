@@ -1,0 +1,43 @@
+{
+  "name": "ai-service",
+  "version": "1.0.0",
+  "description": "AI Service - RAG, Semantic Search, Moderation, Summary, Translation",
+  "scripts": {
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:prod": "node dist/main",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "seed:rag": "ts-node -r tsconfig-paths/register src/rag/seed-documents.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.0",
+    "@nestjs/core": "^10.3.0",
+    "@nestjs/platform-express": "^10.3.0",
+    "@nestjs/config": "^3.1.1",
+    "@nestjs/microservices": "^10.3.0",
+    "openai": "^4.47.1",
+    "@qdrant/js-client-rest": "^1.9.0",
+    "kafkajs": "^2.2.4",
+    "ioredis": "^5.3.2",
+    "class-validator": "^0.14.0",
+    "class-transformer": "^0.5.1",
+    "reflect-metadata": "^0.2.1",
+    "rxjs": "^7.8.1",
+    "axios": "^1.6.7"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^10.3.0",
+    "@nestjs/schematics": "^10.1.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2",
+    "ts-loader": "^9.5.1",
+    "prettier": "^3.2.4",
+    "eslint": "^8.56.0"
+  }
+}
